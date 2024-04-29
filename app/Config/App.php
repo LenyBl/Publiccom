@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://publicom.lan/';
+    public string $baseURL = 'http://publicom-lb.lan/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
