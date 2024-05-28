@@ -8,8 +8,6 @@
     <h1>Liste des messages</h1>
 </div>
 
-
-
 <div class="container">
     <form method="post" action="<?= route_to('supprimer.message') ?>">
         <div class="mb-4">
@@ -23,6 +21,9 @@
                     <th scope="col">Message</th>
                     <th scope="col">Image</th>
                     <th scope="col">Date</th>
+                    <th scope="col">Date Début</th>
+                    <th scope="col">Date Fin</th>
+                    <th scope="col">Prestation payante</th>
                     <th scope="col">Statut</th>
                     <th scope="col">Créateur</th>
                     <th scope="col">Modifier</a></th>
@@ -61,6 +62,14 @@
                             <td scope="col">
                                 <?= $message['DATEHEUREMESSAGE'] ?>
                             </td>
+                            <td scope="col">
+                                <?= $message['DATEDEBUT'] ?>
+                            </td>
+                            <td scope="col">
+                                <?= $message['DATEFIN'] ?>
+                            </td>
+                            <td scope="col">
+                                <?= ($message['PRESTATIONPAYANTE'] == 1 ? "Oui" : "Non") ?>
                             <td scope="col">
                                 <?= ($message['STATUTMESSAGE'] == 1 ? "En ligne" : "Hors ligne") ?>
                             </td>

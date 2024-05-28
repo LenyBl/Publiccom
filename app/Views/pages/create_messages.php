@@ -47,6 +47,19 @@ $this->section('content');
                 <input class="w-100" type="color" id="colortext" name="colortext" value="#0000" />
             </div>
         </li>
+        <div class="input-group mt-4">
+            <label for="dateDebut" class="form-control">Date Début</label>
+            <input type="date" class="form-control" id="inputGroupFile02" name="dateDebut" required>
+        </div>
+        <div class="input-group mt-4">
+            <label for="dateDebut" class="form-control">Date Fin</label>
+            <input type="date" class="form-control" id="inputGroupFile02" name="dateFin" required>
+        </div>
+        <div class="form-check  form-switch">
+            <input class="mt-5 form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" name="prestation" checked>
+            <label class="mt-5 form-check-label " for="flexSwitchCheckChecked">Prestation payante ?</label>
+        </div>
+
 
 
         <div class="form-check  form-switch">

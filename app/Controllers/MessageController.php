@@ -29,6 +29,8 @@ class MessageController extends BaseController
         $message = $this->request->getVar('contenu');
         $police = $this->request->getVar('police');
         $couleur = $this->request->getVar('colortext');
+        $dateDebut = $this->request->getVar('dateDebut');
+        $dateFin = $this->request->getVar('dateFin');
 
         if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
             $image = file_get_contents($_FILES['image']['tmp_name']);
@@ -41,6 +43,12 @@ class MessageController extends BaseController
         } else {
             $statut = 0;
         }
+        if ($prestation = $this->request->getVar('prestation')) {
+            $prestation = 1;
+        } else {
+            $prestation = 0;
+        }
+
 
         $data = [
             'IDUTILISATEUR' => $idutilisateur,
@@ -51,7 +59,10 @@ class MessageController extends BaseController
             'IMAGEMESSAGE' => $image,
             'DATEHEUREMESSAGE' => $dateHeure,
             'STATUTMESSAGE' => $statut,
-            'CREATEURMESSAGE' => $pseudo
+            'CREATEURMESSAGE' => $pseudo,
+            'DATEDEBUT' => $dateDebut,
+            'DATEFIN' => $dateFin,
+            'PRESTATIONPAYANTE' => $prestation
         ];
 
         $messageModel->insert($data);
