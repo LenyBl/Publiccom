@@ -12,10 +12,9 @@
     <br><br><br><br>
     <?php if ($msgActu['PRESTATIONPAYANTE'] == 1) { ?>
     <p>Prestataire : <?= $msgActu["PRENOMUTILISATEUR"] . ' ' . $msgActu['NOMUTILISATEUR']?></p>
-    <?php } else {
-    
-    } ?>
+    <?php } ?>
   </div>
+    
 
   <?php if ($msgSuiv !== null) { ?>
     <div id="carousel-bouton-droite">
