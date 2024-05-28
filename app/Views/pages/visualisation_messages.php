@@ -12,7 +12,9 @@
     <br><br><br><br>
     <?php if ($msgActu['PRESTATIONPAYANTE'] == 1) { ?>
     <p>Prestataire : <?= $msgActu["PRENOMUTILISATEUR"] . ' ' . $msgActu['NOMUTILISATEUR']?></p>
-    <?php } ?>
+    <?php } else {
+    
+    } ?>
   </div>
 
   <?php if ($msgSuiv !== null) { ?>
