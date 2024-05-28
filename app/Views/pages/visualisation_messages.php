@@ -10,7 +10,9 @@
   <div style="background-image: url(data:image/*;base64,<?= base64_encode($msgActu['IMAGEMESSAGE'])?>); background-size: cover;" class="card">
     <p class="text-break" style="font-family: <?= $msgActu['POLICEMESSAGE'] ?>; color: <?=  $msgActu['COULEURMESSAGE'] ?>;"><?= $msgActu["TEXTEMESSAGE"] ?></p>
     <br><br><br><br>
+    <?php if ($msgActu['PRESTATIONPAYANTE'] == 1) { ?>
     <p>Prestataire : <?= $msgActu["PRENOMUTILISATEUR"] . ' ' . $msgActu['NOMUTILISATEUR']?></p>
+    <?php } ?>
   </div>
 
   <?php if ($msgSuiv !== null) { ?>
